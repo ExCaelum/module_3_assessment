@@ -5,7 +5,4 @@ class SearchController < ApplicationController
     @stores = Store.all(params[:q])["stores"]
   end
 
-  def show
-    @store = 
-
 end

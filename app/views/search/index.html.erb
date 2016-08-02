@@ -3,7 +3,7 @@
 
   <% @stores.each do |store| %>
   <p>
-    <%= store["longName"] %><br>
+    <%= link_to store["longName"], store_path(store["storeId"]) %><br>
     <%= store["city"] %><br>
     <%= store["distance"] %><br>
     <%= store["phone"] %><br>

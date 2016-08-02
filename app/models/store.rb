@@ -9,4 +9,8 @@ class Store < OpenStruct
     service.get_stores(zip)
   end
 
+  def self.find(id)
+    service.find_store(id)
+  end
+
 end

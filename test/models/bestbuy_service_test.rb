@@ -21,4 +21,12 @@ class BestbuyServiceTest < ActiveSupport::TestCase
       assert_equal "Mobile", store["storeType"]
     end
   end
+
+  test "when clicking on the link that I get from the stores, I should see the hours" do
+    get "/stores/2740"
+    assert_respone :success
+
+    
+
+  end
 end
