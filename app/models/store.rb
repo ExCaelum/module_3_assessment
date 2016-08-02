@@ -6,6 +6,7 @@ class Store
   end
 
   def self.all
-
+    stores = service.get_stores
+  end
 
 end
