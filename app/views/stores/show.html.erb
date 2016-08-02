@@ -1,14 +1,6 @@
-<h1> <%= @store["longName"] %> </h1>
-<h3> Store Type: <%= @store["storeType"] %><br></h3>
-<h3> <%= @store["address"] %> - <%= @store["city"] %>, <%= @store["region"] %> <%= @store["postalCode"] %> </h3>
+<h1> <%= @store.longName %> </h1>
+<h3> Store Type: <%= @store.storeType %><br></h3>
+<h3> <%= @store.address %> - <%= @store.city %>, <%= @store.region %> <%= @store.postalCode %> </h3>
 <ul>
-  <%= @store["detailedHours"] %>
-  Mon: 10am-9pm
-  Mon: <%= @store["detailedHours"][1] %>
-  Tue: 10am-9pm
-  Wed: 10am-9pm
-  Thurs: 10am-9pm
-  Fri: 10am-9pm
-  Sat: 10am-9pm
-  Sun: 11am-7pm
+  <%= @store.hoursAmPm %>
 </ul>

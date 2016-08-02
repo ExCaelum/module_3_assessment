@@ -6,12 +6,18 @@ class Store < OpenStruct
   end
 
   def self.all(zip)
-    service.get_stores(zip)
+    stores = service.get_stores(zip)
+    stores["stores"].map do |store_hash|
+      Store.new(store_hash)
+    end
+  end
+
+  def self.total(zip)
+    service.get_stores(zip)["total"]
   end
 
   def self.find(id)
-    json_hash = service.find_store(id)
-    json_hash["stores"].first
+    Store.new(service.find_store(id)["stores"].first)
   end
 
 end
