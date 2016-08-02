@@ -18,14 +18,14 @@ class Api::V1::ItemsController < ApplicationController
     if item.save
       render json: item, status: 201
     else
-      render 
-
+      render json: item, status: 400
+    end
   end
 
   private
 
   def item_params
-    params.require(:item).permit(:name, :description, :image_url)
+    params.permit(:name, :description, :image_url)
   end
 
 end

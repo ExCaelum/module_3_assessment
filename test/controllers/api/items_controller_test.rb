@@ -31,6 +31,14 @@ class Api::V1::ItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "we can create an item" do
-    post "api/v1/items"
+    post "api/v1/items?name=screwdriver&description=bueno&image_url=thisimage"
+    assert_response :success
+
+    item = JSON.parse(response.body)
+
+    assert_equal "201", response.code
+    assert_equal "screwdriver", item["name"]
+    assert_equal "bueno", item["description"]
+    assert_equal "thisimage", item["image_url"]
   end
 end
