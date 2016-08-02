@@ -6,6 +6,7 @@ require "minitest/rails/capybara"
 require "webmock/test_unit"
 require "vcr"
 require "rack/test"
+require 'byebug'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!

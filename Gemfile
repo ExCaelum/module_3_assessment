@@ -14,6 +14,7 @@ gem "less-rails-bootstrap"
 gem "minitest-rails"
 gem "faraday"
 gem "figaro"
+gem 'active_model_serializers', github: "rails-api/active_model_serializers"
 
 group :test do
   gem 'test-unit'
@@ -29,4 +30,5 @@ group :development, :test do
   gem "webmock"
   gem "vcr"
   gem "pry", :require => "pry"
+  gem "byebug"
 end
