@@ -2,5 +2,11 @@
 <h3> Store Type: <%= @store.storeType %><br></h3>
 <h3> <%= @store.address %> - <%= @store.city %>, <%= @store.region %> <%= @store.postalCode %> </h3>
 <ul>
-  <%= @store.hoursAmPm %>
+  <% @store.hoursAmPm.split(";").each do |hour| %>
+  <%= hour %><br>
+  <% end %>
 </ul>
+
+<!-- Sorry about that split method up there, I ran out of time, just implemented it. -->
+<!-- Also sorry about the test for this user story, I was getting an unable to find xpath /html error, didn't get to investigate.
+Used the website to drive the development of this story :/ -->

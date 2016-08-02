@@ -193,6 +193,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers!
   byebug
+  capybara
   coffee-rails (~> 4.0.0)
   faker
   faraday

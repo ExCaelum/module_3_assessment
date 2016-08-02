@@ -31,4 +31,6 @@ group :development, :test do
   gem "vcr"
   gem "pry", :require => "pry"
   gem "byebug"
+  gem 'capybara'
+
 end
