@@ -26,7 +26,11 @@ class Api::V1::ItemsControllerTest < ActionDispatch::IntegrationTest
     delete "api/v1/items/1"
     assert_response :success
 
-    assert_equal nil, response.body
+    assert_equal "204", response.code
     assert_equal 1, Item.all.count
+  end
+
+  test "we can create an item" do
+    post "api/v1/items"
   end
 end
