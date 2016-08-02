@@ -6,7 +6,7 @@ class Store < OpenStruct
   end
 
   def self.all(zip)
-    stores = service.get_stores(zip)
+    service.get_stores(zip)
   end
 
 end

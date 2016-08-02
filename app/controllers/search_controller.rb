@@ -1,8 +1,11 @@
 class SearchController < ApplicationController
 
   def index
-    @stores = Store.all(params[:q])
-    byebug
+    @json_hash = Store.all(params[:q])
+    @stores = Store.all(params[:q])["stores"]
   end
+
+  def show
+    @store = 
 
 end

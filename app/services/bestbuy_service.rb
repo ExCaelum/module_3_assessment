@@ -7,7 +7,7 @@ class BestbuyService
   end
 
   def get_stores(zip)
-    response = connection.get("stores%28area%28#{zip},25%29%29?format=json&show=longName,city,distance,phone,storeType")
+    response = connection.get("stores%28area%28#{zip},25%29%29?format=json&show=longName,city,distance,phone,storeType&pageSize=15")
     parse(response)
   end
 

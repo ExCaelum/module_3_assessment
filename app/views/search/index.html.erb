@@ -1,11 +1,13 @@
-<h1>Stores near you</h1>
+<div class="container-fluid">
+  <h1><%= @json_hash["total"] %> total stores </h1>
 
-<% @stores.each do |store| %>
-<p>
-  <%= store.longName %><br>
-  <%= store.city %><br>
-  <%= store.distance %><br>
-  <%= store.phone %><br>
-  <%= store.storeType %><br>
-</p>
-<% end %>
+  <% @stores.each do |store| %>
+  <p>
+    <%= store["longName"] %><br>
+    <%= store["city"] %><br>
+    <%= store["distance"] %><br>
+    <%= store["phone"] %><br>
+    <%= store["storeType"] %><br>
+  </p>
+  <% end %>
+</div>
