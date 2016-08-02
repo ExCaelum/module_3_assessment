@@ -1,9 +1,11 @@
 one:
+  id: 1
   name: Hammer
   description: A very good hammer
   image_url: www.hammer.com
 
 two:
+  id: 2
   name: wrench
   description: A very good wrench
   image_url: www.wrench.com
