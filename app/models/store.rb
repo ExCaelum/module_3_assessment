@@ -10,7 +10,8 @@ class Store < OpenStruct
   end
 
   def self.find(id)
-    service.find_store(id)
+    json_hash = service.find_store(id)
+    json_hash["stores"].first
   end
 
 end

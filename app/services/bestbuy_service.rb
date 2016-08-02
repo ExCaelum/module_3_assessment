@@ -12,8 +12,7 @@ class BestbuyService
   end
 
   def find_store(id)
-    response = connection.get("stores?storeId=#{id}?format=json&show=longName,storeType,address2")
-    byebug
+    response = connection.get("stores%28storeId=#{id}%29?format=json&show=longName,storeType,address,city,region,postalCode,detailedHours")
     parse(response)
   end
 
