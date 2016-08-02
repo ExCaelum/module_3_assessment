@@ -1,0 +1,11 @@
+<h1>Stores near you</h1>
+
+<% @stores.each do |store| %>
+<p>
+  <%= store.longName %><br>
+  <%= store.city %><br>
+  <%= store.distance %><br>
+  <%= store.phone %><br>
+  <%= store.storeType %><br>
+</p>
+<% end %>

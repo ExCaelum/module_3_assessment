@@ -1,7 +1,8 @@
 class SearchController < ApplicationController
 
   def index
-    Store.all
+    @stores = Store.all(params[:q])
+    byebug
   end
 
 end
